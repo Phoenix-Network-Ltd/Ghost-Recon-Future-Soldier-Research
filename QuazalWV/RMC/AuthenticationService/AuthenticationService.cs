@@ -13,6 +13,9 @@ namespace QuazalWV
         {
             switch (rmc.methodID)
             {
+                case 1:
+                    rmc.request = new RMCPacketRequestAuthenticationService_Login(s);
+                    break;
                 case 2:
                     rmc.request = new RMCPacketRequestLoginCustomData(s);
                     break;
@@ -31,40 +34,43 @@ namespace QuazalWV
             RMCPResponse reply;
             switch (rmc.methodID)
             {
-                case 2:
-                    RMCPacketRequestLoginCustomData h = (RMCPacketRequestLoginCustomData)rmc.request;
-                    switch (h.className)
+                // 'Tracking' user - ignore username, identified by Global.TrackingPid
+                case 1:
+                    RMCPacketRequestAuthenticationService_Login rLogin = (RMCPacketRequestAuthenticationService_Login)rmc.request;
+                    switch(rLogin.username)
                     {
-                        case "UbiAuthenticationLoginCustomData":
-                            reply = new RMCPResponseEmpty();
-                            ClientInfo user = DBHelper.GetUserByName(h.username);
-                            if (user != null)
-                            {
-                                if (user.pass == h.password)
-                                {
-                                    reply = new RMCPacketResponseLoginCustomData(client.PID, client.sPID, client.sPort);
-                                    client.name = h.username;
-                                    client.pass = h.password;
-                                    client.sessionKey = ((RMCPacketResponseLoginCustomData)reply).ticket.sessionKey;
-                                    RMC.SendResponseWithACK(client.udp, p, rmc, client, reply);
-                                }
-                                else
-                                {
-                                    RMC.SendResponseWithACK(client.udp, p, rmc, client, reply, true, 0x80030065);
-                                }
-                            }
-                            else
-                            {
-                                RMC.SendResponseWithACK(client.udp, p, rmc, client, reply, true, 0x80030064);
-                            }
+                        case "Tracking":
+                            reply = new RMCPacketResponseAuthenticationService_Login(client, rLogin.username);
+                            RMC.SendResponseWithACK(client.udp, p, rmc, client, reply, useCompression: false);
                             break;
                         default:
-                            Log.WriteLine(1, "[RMC Authentication] Error: Unknown Custom Data class " + h.className);
+                            Log.WriteLine(1, "[RMC Authentication] Error: Unknown (1) Login user: " + rLogin.username);
+                            break;
+                    }
+                    break;
+                // UPlay user credentials (i have no idea who designed this to work that way)
+                case 2:
+                    RMCPacketRequestLoginCustomData rCustom = (RMCPacketRequestLoginCustomData)rmc.request;
+                    switch (rCustom.className)
+                    {
+                        case "UbiAuthenticationLoginCustomData":
+                            // Ubisoft Connect prod username
+                            client.name = rCustom.username;
+                            // Ubisoft Connect prod password (sic)
+                            client.pass = rCustom.password;
+                            // Ubisoft Connect user activation key for GRFS
+                            client.onlineKey = rCustom.onlineKey;
+                            reply = new RMCPacketResponseLoginCustomData(client);
+                            RMC.SendResponseWithACK(client.udp, p, rmc, client, reply);
+                            break;
+                        default:
+                            Log.WriteLine(1, "[RMC Authentication] Error: Unknown Custom Data class " + rCustom.className);
                             break;
                     }
                     break;
                 case 3:
-                    reply = new RMCPacketResponseRequestTicket(client.PID, client.sPID);
+                    RMCPacketRequestRequestTicket rTicket = (RMCPacketRequestRequestTicket)rmc.request;
+                    reply = new RMCPacketResponseRequestTicket(client, rTicket.sourcePID);
                     RMC.SendResponseWithACK(client.udp, p, rmc, client, reply);
                     break;
                 default:

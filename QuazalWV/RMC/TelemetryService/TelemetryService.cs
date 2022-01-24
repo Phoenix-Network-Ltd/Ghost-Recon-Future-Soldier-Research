@@ -16,6 +16,8 @@ namespace QuazalWV
                 case 1:
                     rmc.request = new RMCPacketRequestTelemetry_Method1(s);
                     break;
+                case 4:
+                    break;
                 default:
                     Log.WriteLine(1, "[RMC Telemetry] Error: Unknown Method 0x" + rmc.methodID.ToString("X"));
                     break;
@@ -29,6 +31,10 @@ namespace QuazalWV
             {
                 case 1:
                     reply = new RMCPacketResponseTelemetry_TrackGameSession();
+                    RMC.SendResponseWithACK(client.udp, p, rmc, client, reply);
+                    break;
+                case 4:
+                    reply = new RMCPacketRequestTelemetryService_GetConfiguration();
                     RMC.SendResponseWithACK(client.udp, p, rmc, client, reply);
                     break;
                 default:

@@ -13,6 +13,9 @@ namespace QuazalWV
         {
             switch (rmc.methodID)
             {
+                case 1:
+                    rmc.request = new RMCPacketRequestSecureService_Register(s);
+                    break;
                 case 4:
                     rmc.request = new RMCPacketRequestRegisterEx(s);
                     break;
@@ -28,12 +31,20 @@ namespace QuazalWV
             RMCPResponse reply;
             switch (rmc.methodID)
             {
+                case 1:
+                    // Save urls
+                    // RMCPacketRequestSecureService_Register rReg = (RMCPacketRequestSecureService_Register)rmc.request;
+                    // client.urls = rReg.stationUrls;
+                    // Response is the same as in RegisterEx
+                    reply = new RMCPacketResponseSecureService_RegisterEx(client.PID);
+                    RMC.SendResponseWithACK(client.udp, p, rmc, client, reply);
+                    break;
                 case 4:
                     RMCPacketRequestRegisterEx h = (RMCPacketRequestRegisterEx)rmc.request;
                     switch (h.className)
                     {
                         case "UbiAuthenticationLoginCustomData":
-                            reply = new RMCPacketResponseRegisterEx(client.PID);
+                            reply = new RMCPacketResponseSecureService_RegisterEx(client.PID);
                             RMC.SendResponseWithACK(client.udp, p, rmc, client, reply);
                             break;
                         default:

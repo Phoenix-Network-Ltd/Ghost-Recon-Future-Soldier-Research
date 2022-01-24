@@ -256,16 +256,6 @@ namespace QuazalWV
             s[j] = c;
         }
 
-        public static byte[] DeriveKey(uint pid, string input = "UbiDummyPwd")
-        {
-            uint count = 65000 + (pid % 1024);
-            MD5 md5 = MD5.Create();
-            byte[] buff = Encoding.ASCII.GetBytes(input);
-            for (uint i = 0; i < count; i++)
-                buff = md5.ComputeHash(buff);
-            return buff;
-        }
-
         public static byte[] MakeHMAC(byte[] key, byte[] data)
         {
             HMACMD5 hmac = new HMACMD5(key);
@@ -278,6 +268,14 @@ namespace QuazalWV
             for (int i = 0; i < len; i++)
                 result[i] = (byte)i;
             return result;
+        }
+
+        public static byte[] HexStringToByteArray(string hex)
+        {
+            return Enumerable.Range(0, hex.Length)
+                             .Where(x => x % 2 == 0)
+                             .Select(x => Convert.ToByte(hex.Substring(x, 2), 16))
+                             .ToArray();
         }
     }
 }

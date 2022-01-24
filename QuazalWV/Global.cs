@@ -10,8 +10,30 @@ namespace QuazalWV
 {
     public static class Global
     {
+        /// <summary>
+        /// Unique pids for hardcoded users.
+        /// </summary>
+        public enum SPECIAL_PID
+        {
+            /// <summary>
+            /// Unique pid for 'Tracking' user.
+            /// </summary>
+            Tracking = 0x1111,
+        }
+
         public static readonly string keyDATA = "CD&ML";
-        public static readonly string keyCheckSum = "8dtRv2oj";
+        /// <summary>
+        /// For remote clients, configure for your environment.
+        /// </summary>
+        public static string RemoteServerIp = "192.168.1.70";
+        /// <summary>
+        /// For localhost client testing.
+        /// </summary>
+        public static string LocalServerIp = "127.0.0.1";
+        /// <summary>
+        /// Only for Kerberos ticket, hardcoded for every user.
+        /// </summary>
+        public static byte[] KerberosSesKey = new byte[] { 0x9C, 0xB0, 0x1D, 0x7A, 0x2C, 0x5A, 0x6C, 0x5B, 0xED, 0x12, 0x68, 0x45, 0x69, 0xAE, 0x09, 0x0D };
         public static string serverBindAddress = "127.0.0.1";
         public static uint idCounter = 0x12345678;
         public static uint pidCounter = 0x1234;

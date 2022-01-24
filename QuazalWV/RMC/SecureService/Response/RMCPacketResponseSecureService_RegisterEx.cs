@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace QuazalWV
 {
-    public class RMCPacketResponseRegisterEx : RMCPResponse
+    public class RMCPacketResponseSecureService_RegisterEx : RMCPResponse
     {
         public uint resultCode = 0x00010001;
         public uint connectionId = 78;
         public string clientUrl;
-        public RMCPacketResponseRegisterEx(uint pid)
+        public RMCPacketResponseSecureService_RegisterEx(uint pid)
         {
-            clientUrl = "prudps:/address=" + Global.serverBindAddress + ";port=3074;CID=1;PID=" + pid + ";sid=1;RVCID=4660;stream=3;type=2";
+            clientUrl = "prudps:/address=" + Global.serverBindAddress + ";port=2347;CID=1;PID=" + pid + ";sid=1;RVCID=4660;stream=3;type=2";
         }
 
         public override byte[] ToBuffer()

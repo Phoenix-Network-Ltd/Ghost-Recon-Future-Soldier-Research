@@ -16,16 +16,25 @@ namespace QuazalWV
         public uint IDrecv;
         public uint IDsend;
         public byte sessionID;
-        public byte[] sessionKey;
+        public byte[] sessionKey = Global.KerberosSesKey;
         public ushort seqCounter;
         public ushort seqCounterDO;
         public ushort callCounterDO_RMC;
         public uint callCounterRMC;
         public uint stationID;
         public string name;
-        public string pass;
+        public string pass = null;
+        public string onlineKey;
         public IPEndPoint ep;
         public UdpClient udp;
+        /// <summary>
+        /// Set to true for localhost testing.
+        /// </summary>
+        public bool isLocal = true;
+        /// <summary>
+        /// Client's PRUDP URLs list.
+        /// </summary>
+        public List<string> urls = new List<string>();
         public bool bootStrapDone = false;
         public bool matchStartSent = false;
         public bool playerCreateStuffSent1 = false;

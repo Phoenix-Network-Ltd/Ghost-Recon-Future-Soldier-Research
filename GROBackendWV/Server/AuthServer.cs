@@ -10,13 +10,12 @@ using QuazalWV;
 
 namespace GROBackendWV
 {
-    public static class UDPMainServer
+    public static class AuthServer
     {
-        public static readonly uint serverPID = 0x1000;
         public static readonly object _sync = new object();
         public static bool _exit = false;
-        public static ushort listenPort = 21031;
-        public static UdpClient listener;
+        public static ushort listenPort = 21030;
+        private static UdpClient listener;
         public static ushort _skipNextNAT = 0xFFFF;
 
         public static void Start()
@@ -59,12 +58,12 @@ namespace GROBackendWV
 
         public static void ProcessPacket(byte[] data, IPEndPoint ep)
         {
-            QPacketHandler.ProcessPacket("UDP Backend", data, ep, listener, UDPMainServer.serverPID, UDPMainServer.listenPort);
+            QPacketHandler.ProcessPacket("UDP Auth", data, ep, listener, SecureServer.serverPID, SecureServer.listenPort);
         }
 
         private static void WriteLog(int priority, string s)
         {
-            Log.WriteLine(priority, "[UDP Main] " + s);
+            Log.WriteLine(priority, "[UDP Auth] " + s);
         }
     }
 }
