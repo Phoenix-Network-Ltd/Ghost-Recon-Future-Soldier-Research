@@ -59,7 +59,7 @@ namespace QuazalWV
 
         public override string PayloadToString()
         {
-            throw new NotImplementedException();
+            return "";
         }
 
         public override byte[] ToBuffer()

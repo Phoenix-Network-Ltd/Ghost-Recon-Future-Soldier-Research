@@ -105,7 +105,7 @@ namespace QuazalWV
                     OverlordNewsProtocolService.HandleOverlordNewsProtocolRequest(p, rmc, client);
                     break;
                 case RMCP.PROTOCOL.OverlordCoreProtocolService:
-                    WriteLog(1, "Error: No handler implemented for packet protocol OverlordCoreProtocolService");
+                    OverlordCoreService.HandleOverlordCoreServiceRequest(p, rmc, client);
                     break;
                 case RMCP.PROTOCOL.ExtraContentProtocolService:
                     WriteLog(1, "Error: No handler implemented for packet protocol ExtraContentProtocolService");
@@ -163,9 +163,12 @@ namespace QuazalWV
                 case RMCP.PROTOCOL.TrackingExtService:
                     TrackingExtService.ProcessTrackingExtServiceRequest(m, rmc);
                     break;
-                case RMCP.PROTOCOL.OverlordNewsProtocolService:
-                case RMCP.PROTOCOL.MatchMakingService:
                 case RMCP.PROTOCOL.NATTraversalRelayProtocol:
+                case RMCP.PROTOCOL.MatchMakingService:
+                case RMCP.PROTOCOL.OverlordNewsProtocolService:
+                    break;
+                case RMCP.PROTOCOL.OverlordCoreProtocolService:
+                    OverlordCoreService.ProcessOverlordCoreServiceRequest(m, rmc);
                     break;
                 default:
                     WriteLog(1, "Error: No request reader implemented for packet protocol " + rmc.proto);

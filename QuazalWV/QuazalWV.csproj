@@ -102,6 +102,8 @@
     <Compile Include="Classes\GRFS Common\AnyDataHeader.cs" />
     <Compile Include="Classes\GRFS Common\AnyDataHolder.cs" />
     <Compile Include="Classes\GRFS Common\IData.cs" />
+    <Compile Include="RMC\OverlordCoreService\OverlordCoreService.cs" />
+    <Compile Include="RMC\OverlordCoreService\RMCPacketResponseOverlordCoreService_GetSettings.cs" />
     <Compile Include="RMC\PrivilegesService\Objects\PrivilegeEx.cs" />
     <Compile Include="RMC\PrivilegesService\PrivilegesService.cs" />
     <Compile Include="RMC\PrivilegesService\Request\RMCPacketRequestPrivilegesService_GetPrivilegesEx.cs" />
@@ -268,9 +270,7 @@
     <Compile Include="RMC\UplayWinService\Response\RMCPacketResponseUPlayWinService_GetActionsForUser.cs" />
     <Compile Include="RMC\UplayWinService\UplayWinService.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="RMC\RichPresenceService\Response\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
