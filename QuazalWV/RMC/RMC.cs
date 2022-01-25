@@ -92,6 +92,12 @@ namespace QuazalWV
                 case RMCP.PROTOCOL.RichPresenceProtocol:
                     RichPresenceService.HandleRichPresenceServiceRequest(p, rmc, client);
                     break;
+                case RMCP.PROTOCOL.ClansService:
+                    ClansService.HandleClansServiceRequest(p, rmc, client);
+                    break;
+                case RMCP.PROTOCOL.MiscFriendServices:
+                    MiscFriendServices.HandleMiscFriendServicesRequest(p, rmc, client);
+                    break;
                 case RMCP.PROTOCOL.UplayWinService:
                     UplayWinService.HandleUplayWinServiceRequest(p, rmc, client);
                     break;
@@ -156,6 +162,12 @@ namespace QuazalWV
                     break;
                 case RMCP.PROTOCOL.RichPresenceProtocol:
                     RichPresenceService.ProcessRichPresenceServiceRequest(m, rmc);
+                    break;
+                case RMCP.PROTOCOL.ClansService:
+                    ClansService.ProcessClansServiceRequest(m, rmc);
+                    break;
+                case RMCP.PROTOCOL.MiscFriendServices:
+                    MiscFriendServices.ProcessMiscFriendServicesRequest(m, rmc);
                     break;
                 case RMCP.PROTOCOL.UplayWinService:
                     UplayWinService.ProcessUplayWinServiceRequest(m, rmc);

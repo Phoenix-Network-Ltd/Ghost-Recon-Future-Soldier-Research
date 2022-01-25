@@ -1,20 +1,19 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace QuazalWV
 {
-    public static class FriendsService
+    public static class MiscFriendServices
     {
-        public static void ProcessFriendsServiceRequest(Stream s, RMCP rmc)
+        public static void ProcessMiscFriendServicesRequest(Stream s, RMCP rmc)
         {
             switch (rmc.methodID)
             {
-                case 0xD:
-                    rmc.request = new RMCPacketRequestFriendsService_GetRelationships(s);
+                case 3:
                     break;
                 default:
                     Log.WriteLine(1, "[RMC Friends] Error: Unknown Method 0x" + rmc.methodID.ToString("X"));
@@ -22,13 +21,13 @@ namespace QuazalWV
             }
         }
 
-        public static void HandleFriendsServiceRequest(QPacket p, RMCP rmc, ClientInfo client)
+        public static void HandleMiscFriendServicesRequest(QPacket p, RMCP rmc, ClientInfo client)
         {
             RMCPResponse reply;
             switch (rmc.methodID)
             {
-                case 0xD:
-                    reply = new RMCPacketResponseFriendsService_GetRelationships();
+                case 3:
+                    reply = new RMCPacketResponseMiscFriendServices_Method3();
                     RMC.SendResponseWithACK(client.udp, p, rmc, client, reply);
                     break;
                 default:

@@ -102,6 +102,15 @@
     <Compile Include="Classes\GRFS Common\AnyDataHeader.cs" />
     <Compile Include="Classes\GRFS Common\AnyDataHolder.cs" />
     <Compile Include="Classes\GRFS Common\IData.cs" />
+    <Compile Include="Classes\GRFS Common\ResultRange.cs" />
+    <Compile Include="RMC\ClansService\ClansService.cs" />
+    <Compile Include="RMC\ClansService\Response\RMCPacketResponseClansService_MethodD.cs" />
+    <Compile Include="RMC\FriendsService\Objects\RelationshipData.cs" />
+    <Compile Include="RMC\FriendsService\Request\RMCPacketRequestFriendsService_GetRelationships.cs" />
+    <Compile Include="RMC\FriendsService\Response\RMCPacketResponseFriendsService_GetRelationships.cs" />
+    <Compile Include="RMC\MiscFriendServices\Objects\MiscFriendObject.cs" />
+    <Compile Include="RMC\MiscFriendServices\MiscFriendServices.cs" />
+    <Compile Include="RMC\MiscFriendServices\Response\RMCPacketResponseMiscFriendServices_Method3.cs" />
     <Compile Include="RMC\OverlordCoreService\OverlordCoreService.cs" />
     <Compile Include="RMC\OverlordCoreService\RMCPacketResponseOverlordCoreService_GetSettings.cs" />
     <Compile Include="RMC\PrivilegesService\Objects\PrivilegeEx.cs" />
@@ -113,7 +122,9 @@
     <Compile Include="RMC\TitleStorageService\Objects\GameConfigContent.cs" />
     <Compile Include="RMC\TitleStorageService\Objects\TitleContent.cs" />
     <Compile Include="RMC\TitleStorageService\Request\RMCPacketRequestTitleStorageService_BrowseContentsByType.cs" />
+    <Compile Include="RMC\TitleStorageService\Request\RMCPacketRequestTitleStorageService_DownloadContent.cs" />
     <Compile Include="RMC\TitleStorageService\Response\RMCPacketResponseTitleStorageService_BrowseContentsByType.cs" />
+    <Compile Include="RMC\TitleStorageService\Response\RMCPacketResponseTitleStorageService_DownloadContent.cs" />
     <Compile Include="RMC\TitleStorageService\TitleStorageService.cs" />
     <Compile Include="RMC\TrackingExtService\Request\RMCPacketRequestTrackingExtService_RegisterTrackingSessionEx.cs" />
     <Compile Include="RMC\TrackingExtService\Response\RMCPacketResponseTrackingExtService_RegisterTrackingSessionEx.cs" />

@@ -54,6 +54,7 @@ namespace QuazalWV
                 new PrivilegeEx(0x13BA, "Unlock an R6 weapon skin by having a save file or achievement for GRAW 1/2, or SC: Conviction"),
                 new PrivilegeEx(0x13C4, "Unlock a Tom Clancy weapon skin by having a save game or achievement for GRAW 1/2, or SC: Conviction"),
                 new PrivilegeEx(0x13CE, "Unlock a Splinter Cell weapon skin by having a save game or achievement from SC: Conviction"),
+                new PrivilegeEx(0x13D6, "This is an unknown PrivilegeEx found in GRFS binary, offset 0xA4AE50"),
             };
         }
 

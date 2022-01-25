@@ -16,6 +16,9 @@ namespace QuazalWV
                 case 2:
                     rmc.request = new RMCPacketRequestTitleStorageService_BrowseContentsByType(s);
                     break;
+                case 4:
+                    rmc.request = new RMCPacketRequestTitleStorageService_DownloadContent(s);
+                    break;
                 default:
                     Log.WriteLine(1, "[RMC Title Storage] Error: Unknown Method 0x" + rmc.methodID.ToString("X"));
                     break;
@@ -29,6 +32,10 @@ namespace QuazalWV
             {
                 case 2:
                     reply = new RMCPacketResponseTitleStorageService_BrowseContentsByType();
+                    RMC.SendResponseWithACK(client.udp, p, rmc, client, reply);
+                    break;
+                case 4:
+                    reply = new RMCPacketResponseTitleStorageService_DownloadContent();
                     RMC.SendResponseWithACK(client.udp, p, rmc, client, reply);
                     break;
                 default:
