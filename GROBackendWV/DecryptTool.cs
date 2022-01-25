@@ -46,7 +46,10 @@ namespace GROBackendWV
                     sb.Append(b.ToString("X2"));
                 richTextBox2.Text = sb.ToString();
             }
-            catch { richTextBox2.Text = "ERROR"; }
+            catch (Exception ex)
+            { 
+                richTextBox2.Text = $"ERROR\n{ex}";
+            }
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)

@@ -80,8 +80,23 @@ namespace QuazalWV
                 case RMCP.PROTOCOL.MatchMakingService:
                     MatchMakingService.HandleMatchMakingServiceRequest(p, rmc, client);
                     break;
+                case RMCP.PROTOCOL.PrivilegesService:
+                    PrivilegesService.HandlePrivilegesServiceRequest(p, rmc, client);
+                    break;
                 case RMCP.PROTOCOL.TelemetryService:
                     TelemetryService.HandleTelemetryServiceRequest(p, rmc, client);
+                    break;
+                case RMCP.PROTOCOL.TitleStorageService:
+                    TitleStorageService.HandleTitleStorageServiceRequest(p, rmc, client);
+                    break;
+                case RMCP.PROTOCOL.RichPresenceProtocol:
+                    RichPresenceService.HandleRichPresenceServiceRequest(p, rmc, client);
+                    break;
+                case RMCP.PROTOCOL.UplayWinService:
+                    UplayWinService.HandleUplayWinServiceRequest(p, rmc, client);
+                    break;
+                case RMCP.PROTOCOL.TrackingExtService:
+                    TrackingExtService.HandleTrackingExtServiceRequest(p, rmc, client);
                     break;
                 case RMCP.PROTOCOL.RPNEProtocolService:
                     WriteLog(1, "Error: No handler implemented for packet protocol RPNEProtocolService");
@@ -127,11 +142,26 @@ namespace QuazalWV
                 case RMCP.PROTOCOL.SecureService:
                     SecureService.ProcessSecureServiceRequest(m, rmc);
                     break;
+                case RMCP.PROTOCOL.FriendsService:
+                    FriendsService.ProcessFriendsServiceRequest(m, rmc);
+                    break;
+                case RMCP.PROTOCOL.PrivilegesService:
+                    PrivilegesService.ProcessPrivilegesServiceRequest(m, rmc);
+                    break;
                 case RMCP.PROTOCOL.TelemetryService:
                     TelemetryService.ProcessTelemetryServiceRequest(m, rmc);
                     break;
-                case RMCP.PROTOCOL.FriendsService:
-                    FriendsService.ProcessFriendsServiceRequest(m, rmc);
+                case RMCP.PROTOCOL.TitleStorageService:
+                    TitleStorageService.ProcessTitleStorageServiceRequest(m, rmc);
+                    break;
+                case RMCP.PROTOCOL.RichPresenceProtocol:
+                    RichPresenceService.ProcessRichPresenceServiceRequest(m, rmc);
+                    break;
+                case RMCP.PROTOCOL.UplayWinService:
+                    UplayWinService.ProcessUplayWinServiceRequest(m, rmc);
+                    break;
+                case RMCP.PROTOCOL.TrackingExtService:
+                    TrackingExtService.ProcessTrackingExtServiceRequest(m, rmc);
                     break;
                 case RMCP.PROTOCOL.OverlordNewsProtocolService:
                 case RMCP.PROTOCOL.MatchMakingService:
