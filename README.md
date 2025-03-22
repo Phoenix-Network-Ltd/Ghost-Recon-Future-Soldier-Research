@@ -7,16 +7,15 @@ This project **does not** intend to emulate or bypass Ubisoft Connect services -
 
 ## Config
 
-Unlike GRO, the game doesn't use Yeti.ini file. The configuration is likely acquired from remote services.
+Unlike GRO, the game doesn't use `Yeti.ini` file. The configuration is likely acquired from remote services.
 
 ## Projects
-- DareDebuggerWV : tool to interface the daredebug port of the game
-- DTBReaderWV : converts .dtb files to .csv
-- GROBackendWV : experimental backend for GRO
-- GRODedicatedServerWV : experimental DS for GRO
-- GROExplorerWV : tool to browse the yeti.big file for game content
-- GROMemoryToolWV : tool to browse various stuctures like lists and trees in memory
-- NamespaceParserWV : Extracts custom RTTI information found in different exe and dll
+- `DareDebuggerWV` - tool to interface the daredebug port of the game
+- `DTBReaderWV` - converts .dtb files to .csv
+- `GRFSBackend` - experimental Rendez-Vous backend for GRFS
+- `NamespaceParserWV` - extracts Quazal's DDL type information found in game binaries (EXE/DLL)
+- `QuazalSharkWV` - custom packet log analyzer
+- `QuazalWV` - implementation of Quazal's protocol stack
 
 ## Credits
 
