@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30011.22
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Be.Windows.Forms.HexBox", "Be.Windows.Forms.HexBox\Be.Windows.Forms.HexBox.csproj", "{26C5F25F-B450-4CAF-AD8B-B8D11AE73457}"
 EndProject
@@ -12,8 +12,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuazalWV", "QuazalWV\QuazalWV.csproj", "{8330545E-0887-434A-A0DE-343B90AEA2CE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuazalSharkWV", "QuazalSharkWV\QuazalSharkWV.csproj", "{E3D7B61E-6CF7-4373-B30B-7135365DE9F3}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AICLASS_PCClient_R", "GRO_Hook\AICLASS_PCClient_R\AICLASS_PCClient_R.vcxproj", "{1B7FE665-385D-4ED9-A0FD-280F49D30B0C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GRFSBackend", "GROBackendWV\GRFSBackend.csproj", "{AB87FC0F-1A7C-4846-911F-A15ED83E7EEA}"
 EndProject
@@ -51,10 +49,6 @@ Global
 		{E3D7B61E-6CF7-4373-B30B-7135365DE9F3}.Debug|Win32.Build.0 = Debug|x86
 		{E3D7B61E-6CF7-4373-B30B-7135365DE9F3}.Release|Win32.ActiveCfg = Release|x86
 		{E3D7B61E-6CF7-4373-B30B-7135365DE9F3}.Release|Win32.Build.0 = Release|x86
-		{1B7FE665-385D-4ED9-A0FD-280F49D30B0C}.Debug|Win32.ActiveCfg = Debug|Win32
-		{1B7FE665-385D-4ED9-A0FD-280F49D30B0C}.Debug|Win32.Build.0 = Debug|Win32
-		{1B7FE665-385D-4ED9-A0FD-280F49D30B0C}.Release|Win32.ActiveCfg = Release|Win32
-		{1B7FE665-385D-4ED9-A0FD-280F49D30B0C}.Release|Win32.Build.0 = Release|Win32
 		{AB87FC0F-1A7C-4846-911F-A15ED83E7EEA}.Debug|Win32.ActiveCfg = Debug|x86
 		{AB87FC0F-1A7C-4846-911F-A15ED83E7EEA}.Debug|Win32.Build.0 = Debug|x86
 		{AB87FC0F-1A7C-4846-911F-A15ED83E7EEA}.Release|Win32.ActiveCfg = Release|x86
