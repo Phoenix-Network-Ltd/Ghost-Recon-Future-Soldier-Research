@@ -1,4 +1,4 @@
-﻿namespace GROBackendWV
+﻿namespace GRFSBackend
 {
     partial class Form1
     {
@@ -223,7 +223,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ghost Recon Online Backend by Warranty Voider";
+            this.Text = "Ghost Recon: Future Soldier Rendez-Vous";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

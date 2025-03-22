@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using Be.Windows.Forms;
 using QuazalWV;
 
-namespace GROBackendWV
+namespace GRFSBackend
 {
     public partial class PacketGenerator : Form
     {

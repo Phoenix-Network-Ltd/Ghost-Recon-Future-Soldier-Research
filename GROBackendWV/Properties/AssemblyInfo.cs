@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("GRFSBackend")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Phoenix Network")]
+[assembly: AssemblyCompany("Phoenix Network Ltd.")]
 [assembly: AssemblyProduct("GRFSBackend")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]

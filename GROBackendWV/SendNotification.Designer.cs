@@ -1,4 +1,4 @@
-﻿namespace GROBackendWV
+﻿namespace GRFSBackend
 {
     partial class SendNotification
     {

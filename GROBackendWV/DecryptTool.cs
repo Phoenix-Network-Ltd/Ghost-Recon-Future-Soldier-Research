@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuazalWV;
 
-namespace GROBackendWV
+namespace GRFSBackend
 {
     public partial class DecryptTool : Form
     {

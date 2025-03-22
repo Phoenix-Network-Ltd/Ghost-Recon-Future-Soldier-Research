@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using QuazalWV;
 
-namespace GROBackendWV
+namespace GRFSBackend
 {
     public static class AuthServer
     {

@@ -7,8 +7,8 @@
     <ProjectGuid>{AB87FC0F-1A7C-4846-911F-A15ED83E7EEA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GROBackendWV</RootNamespace>
-    <AssemblyName>GROBackendWV</AssemblyName>
+    <RootNamespace>GRFSBackend</RootNamespace>
+    <AssemblyName>GRFSBackend</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
