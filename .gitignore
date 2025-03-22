@@ -46,3 +46,5 @@ msbuild.wrn
 Be.Windows.Forms.HexBox/*
 *.dtbcache.json
 *.suo
+*.dll
+*.exe
