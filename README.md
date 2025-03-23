@@ -5,6 +5,8 @@ Quazal Rendez-Vous (RDV) emulator for Ghost Recon: Future Soldier.
 ## Disclaimers
 This project **does not** intend to emulate or bypass Ubisoft Connect services - in order to run the game you need a regular activation key acquired from Ubisoft and linked to your Ubi account.
 
+This is non-for-profit emulation software meant for game preservation purposes, **not for commercial use**.
+
 ## Config
 
 Unlike GRO, the game doesn't use `Yeti.ini` file. The configuration is likely acquired from remote services.
