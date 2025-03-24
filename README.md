@@ -16,6 +16,8 @@ To redirect game traffic to your local server add the below `hosts` file entry:
 127.0.0.1 onlineconfigservice.ubi.com
 ```
 
+You can run the server directly with `runme.bat` startup script or through Visual Studio's debugger.
+
 ## Projects
 - `DareDebuggerWV` - tool to interface the daredebug port of the game
 - `DTBReaderWV` - converts .dtb files to .csv
