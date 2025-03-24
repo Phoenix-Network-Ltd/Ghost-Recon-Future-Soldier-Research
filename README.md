@@ -16,6 +16,14 @@ To redirect game traffic to your local server add the below [`hosts`](https://en
 127.0.0.1 onlineconfigservice.ubi.com
 ```
 
+Add your Ubisoft credentials to `database.sqlite` file:
+```sql
+INSERT INTO users VALUES (2, 1, 'exampleUbiUser', 'exampleUbiPassword');
+```
+
+> [!CAUTION]
+> During code reviews make sure you **do not commit your credentials**.
+
 You can run the desktop application directly with `runme.bat` script or through Visual Studio's debugger. Press `Start` button to start the servers up.
 
 ## Projects
