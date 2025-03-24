@@ -11,7 +11,7 @@ This is non-for-profit emulation software meant for game preservation purposes, 
 
 Unlike GRO, the game doesn't use `Yeti.ini` file. The configuration is likely acquired from remote services.
 
-To redirect game traffic to your local server add the below `hosts` file entry:
+To redirect game traffic to your local server add the below [`hosts`](https://en.wikipedia.org/wiki/Hosts_(file)) file entry:
 ```
 127.0.0.1 onlineconfigservice.ubi.com
 ```
