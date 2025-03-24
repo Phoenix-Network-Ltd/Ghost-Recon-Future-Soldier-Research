@@ -16,7 +16,7 @@ To redirect game traffic to your local server add the below [`hosts`](https://en
 127.0.0.1 onlineconfigservice.ubi.com
 ```
 
-You can run the server directly with `runme.bat` startup script or through Visual Studio's debugger.
+You can run the desktop application directly with `runme.bat` script or through Visual Studio's debugger. Press `Start` button to start the servers up.
 
 ## Projects
 - `DareDebuggerWV` - tool to interface the daredebug port of the game
