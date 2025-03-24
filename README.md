@@ -16,7 +16,7 @@ To redirect game traffic to your local server add the below [`hosts`](https://en
 127.0.0.1 onlineconfigservice.ubi.com
 ```
 
-Add your Ubisoft credentials to `database.sqlite` file:
+Add your Ubisoft credentials to `database.sqlite` file (optional step, currently db users are unsupported):
 ```sql
 INSERT INTO users VALUES (2, 1, 'exampleUbiUser', 'exampleUbiPassword');
 ```
