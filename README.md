@@ -11,6 +11,11 @@ This is non-for-profit emulation software meant for game preservation purposes, 
 
 Unlike GRO, the game doesn't use `Yeti.ini` file. The configuration is likely acquired from remote services.
 
+To redirect game traffic to your local server add the below `hosts` file entry:
+```
+127.0.0.1 onlineconfigservice.ubi.com
+```
+
 ## Projects
 - `DareDebuggerWV` - tool to interface the daredebug port of the game
 - `DTBReaderWV` - converts .dtb files to .csv
