@@ -65,7 +65,7 @@ namespace QuazalWV
                 WriteLog(5, payload);
             switch (rmc.proto)
             {
-                case RMCP.PROTOCOL.NATTraversalRelayProtocol:
+                case RMCP.PROTOCOL.NATTraversalRelayService:
                     NATTraversalService.HandleNATTraversalServiceRequest(p, rmc, client);
                     break;
                 case RMCP.PROTOCOL.AuthenticationService:
@@ -89,43 +89,43 @@ namespace QuazalWV
                 case RMCP.PROTOCOL.TitleStorageService:
                     TitleStorageService.HandleTitleStorageServiceRequest(p, rmc, client);
                     break;
-                case RMCP.PROTOCOL.RichPresenceProtocol:
+                case RMCP.PROTOCOL.RichPresenceService:
                     RichPresenceService.HandleRichPresenceServiceRequest(p, rmc, client);
                     break;
                 case RMCP.PROTOCOL.ClansService:
                     ClansService.HandleClansServiceRequest(p, rmc, client);
                     break;
-                case RMCP.PROTOCOL.MiscFriendServices:
-                    MiscFriendServices.HandleMiscFriendServicesRequest(p, rmc, client);
+                case RMCP.PROTOCOL.MiscService:
+                    MiscService.HandleMiscServiceRequest(p, rmc, client);
                     break;
                 case RMCP.PROTOCOL.UplayWinService:
                     UplayWinService.HandleUplayWinServiceRequest(p, rmc, client);
                     break;
-                case RMCP.PROTOCOL.TrackingExtService:
-                    TrackingExtService.HandleTrackingExtServiceRequest(p, rmc, client);
+                case RMCP.PROTOCOL.TrackingExtensionService:
+                    ExtendedTrackingService.HandleTrackingExtServiceRequest(p, rmc, client);
                     break;
-                case RMCP.PROTOCOL.RPNEProtocolService:
+                case RMCP.PROTOCOL.OverlordRPNEService:
                     WriteLog(1, "Error: No handler implemented for packet protocol RPNEProtocolService");
                     break;
-                case RMCP.PROTOCOL.OverlordNewsProtocolService:
+                case RMCP.PROTOCOL.OverlordNewsService:
                     OverlordNewsProtocolService.HandleOverlordNewsProtocolRequest(p, rmc, client);
                     break;
-                case RMCP.PROTOCOL.OverlordCoreProtocolService:
+                case RMCP.PROTOCOL.OverlordCoreService:
                     OverlordCoreService.HandleOverlordCoreServiceRequest(p, rmc, client);
                     break;
-                case RMCP.PROTOCOL.ExtraContentProtocolService:
+                case RMCP.PROTOCOL.OverlordExtraContentService:
                     WriteLog(1, "Error: No handler implemented for packet protocol ExtraContentProtocolService");
                     break;
-                case RMCP.PROTOCOL.OverlordFriendsProtocolService:
+                case RMCP.PROTOCOL.OverlordFriendsService:
                     WriteLog(1, "Error: No handler implemented for packet protocol OverlordFriendsProtocolService");
                     break;
-                case RMCP.PROTOCOL.OverlordAwardsProtocolService:
+                case RMCP.PROTOCOL.OverlordAwardsService:
                     WriteLog(1, "Error: No handler implemented for packet protocol OverlordAwardsProtocolService");
                     break;
-                case RMCP.PROTOCOL.OverlordChallengeProtocolService:
+                case RMCP.PROTOCOL.OverlordChallengeService:
                     WriteLog(1, "Error: No handler implemented for packet protocol OverlordChallengeProtocolService");
                     break;
-                case RMCP.PROTOCOL.OverlordDareProtocolService:
+                case RMCP.PROTOCOL.OverlordDareService:
                     WriteLog(1, "Error: No handler implemented for packet protocol OverlordDareProtocolService");
                     break;
                 default:
@@ -160,26 +160,26 @@ namespace QuazalWV
                 case RMCP.PROTOCOL.TitleStorageService:
                     TitleStorageService.ProcessTitleStorageServiceRequest(m, rmc);
                     break;
-                case RMCP.PROTOCOL.RichPresenceProtocol:
+                case RMCP.PROTOCOL.RichPresenceService:
                     RichPresenceService.ProcessRichPresenceServiceRequest(m, rmc);
                     break;
                 case RMCP.PROTOCOL.ClansService:
                     ClansService.ProcessClansServiceRequest(m, rmc);
                     break;
-                case RMCP.PROTOCOL.MiscFriendServices:
-                    MiscFriendServices.ProcessMiscFriendServicesRequest(m, rmc);
+                case RMCP.PROTOCOL.MiscService:
+                    MiscService.ProcessMiscServiceRequest(m, rmc);
                     break;
                 case RMCP.PROTOCOL.UplayWinService:
                     UplayWinService.ProcessUplayWinServiceRequest(m, rmc);
                     break;
-                case RMCP.PROTOCOL.TrackingExtService:
-                    TrackingExtService.ProcessTrackingExtServiceRequest(m, rmc);
+                case RMCP.PROTOCOL.TrackingExtensionService:
+                    ExtendedTrackingService.ProcessTrackingExtServiceRequest(m, rmc);
                     break;
-                case RMCP.PROTOCOL.NATTraversalRelayProtocol:
+                case RMCP.PROTOCOL.NATTraversalRelayService:
                 case RMCP.PROTOCOL.MatchMakingService:
-                case RMCP.PROTOCOL.OverlordNewsProtocolService:
+                case RMCP.PROTOCOL.OverlordNewsService:
                     break;
-                case RMCP.PROTOCOL.OverlordCoreProtocolService:
+                case RMCP.PROTOCOL.OverlordCoreService:
                     OverlordCoreService.ProcessOverlordCoreServiceRequest(m, rmc);
                     break;
                 default:

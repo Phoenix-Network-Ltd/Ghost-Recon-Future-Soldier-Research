@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 
 namespace QuazalWV
 {
@@ -27,7 +22,7 @@ namespace QuazalWV
             switch (rmc.methodID)
             {
                 case 0xD:
-                    reply = new RMCPacketResponseClansService_MethodD();
+                    reply = new RMCPacketResponseClansService_GetCurUserClan();
                     RMC.SendResponseWithACK(client.udp, p, rmc, client, reply);
                     break;
                 default:

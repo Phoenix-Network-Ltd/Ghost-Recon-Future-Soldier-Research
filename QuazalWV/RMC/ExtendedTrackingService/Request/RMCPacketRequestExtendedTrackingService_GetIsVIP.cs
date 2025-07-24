@@ -1,24 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 
 namespace QuazalWV
 {
-    public class RMCPacketRequestTrackingExtService_RegisterTrackingSessionEx : RMCPRequest
+    public class RMCPacketRequestExtendedTrackingService_GetIsVIP : RMCPRequest
     {
         public string Pid { get; set; }
 
-        public RMCPacketRequestTrackingExtService_RegisterTrackingSessionEx(Stream s)
+        public RMCPacketRequestExtendedTrackingService_GetIsVIP(Stream s)
         {
             Pid = Helper.ReadString(s);
         }
 
         public override string ToString()
         {
-            return "[RegisterTrackingSessionEx Request]";
+            return "[GetIsVIP Request]";
         }
 
         public override string PayloadToString()

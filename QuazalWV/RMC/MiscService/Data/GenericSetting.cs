@@ -1,28 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 
 namespace QuazalWV
 {
-    /// <summary>
-    /// Class name assumed.
-    /// </summary>
-    public class MiscFriendObject : IData
+    public class GenericSetting : IData
     {
         public uint Uint1 { get; set; }
         public uint Uint2 { get; set; }
 
-        public MiscFriendObject()
+        public GenericSetting()
         {
             // Experimental
             Uint1 = 1;
             Uint2 = 1;
         }
 
-        public MiscFriendObject(Stream s)
+        public GenericSetting(Stream s)
         {
             FromStream(s);
         }
@@ -40,7 +32,7 @@ namespace QuazalWV
 
         public string GetClass()
         {
-            return "MiscFriendObject";
+            return "GenericSetting";
         }
 
         public void ToBuffer(Stream s)

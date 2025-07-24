@@ -1,9 +1,5 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.IO;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace QuazalWV
 {
@@ -11,7 +7,7 @@ namespace QuazalWV
     {
         public enum PROTOCOL
         {
-            NATTraversalRelayProtocol = 3,
+            NATTraversalRelayService = 3,
             AuthenticationService = 0xA,
             SecureService = 0xB,
             BackendServices = 0xE,
@@ -19,7 +15,7 @@ namespace QuazalWV
             MatchMakingService = 0x15,
             PersistentStoreService = 0x18,
             AccountMgmtService = 0x19,
-            MessageDeliveryProtocol = 0x1B,
+            MessageDeliveryService = 0x1B,
             NewsService = 0x1F,
             UbiNewsService = 0x21,
             PrivilegesService = 0x23,
@@ -31,9 +27,9 @@ namespace QuazalWV
             SearchFriendsService = 0x56,
             FriendMessagesExtService = 0x57,
             PlayerStatisticsService = 0x6C,
-            RichPresenceProtocol = 0x6D,
+            RichPresenceService = 0x6D,
             ClansService = 0x6E,
-            MiscFriendServices = 0x6F,
+            MiscService = 0x6F,
             IP2LocationService = 0x70,
             GameInfoService = 0x71,
             ContactsExtensionService = 0x72,
@@ -43,17 +39,17 @@ namespace QuazalWV
             GR5AwardService = 0x77,
             UplayWinService = 0x78,
             MapListService = 0x79,
-            TrackingExtService = 0x7D,
+            TrackingExtensionService = 0x7D,
             EventsTrackingService = 0x7E,
-            OnlinePassProtocolService = 0x7F,
-            RPNEProtocolService = 0x1389,
-            OverlordNewsProtocolService = 0x138A,
-            OverlordCoreProtocolService = 0x138B,
-            ExtraContentProtocolService = 0x138C,
-            OverlordFriendsProtocolService = 0x138D,
-            OverlordAwardsProtocolService = 0x138E,
-            OverlordChallengeProtocolService = 0x138F,
-            OverlordDareProtocolService = 0x1390
+            OnlinePassService = 0x7F,
+            OverlordRPNEService = 0x1389,
+            OverlordNewsService = 0x138A,
+            OverlordCoreService = 0x138B,
+            OverlordExtraContentService = 0x138C,
+            OverlordFriendsService = 0x138D,
+            OverlordAwardsService = 0x138E,
+            OverlordChallengeService = 0x138F,
+            OverlordDareService = 0x1390
         }
 
         public PROTOCOL proto;

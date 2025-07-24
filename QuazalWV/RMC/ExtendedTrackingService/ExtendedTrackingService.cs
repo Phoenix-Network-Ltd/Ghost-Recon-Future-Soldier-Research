@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 
 namespace QuazalWV
 {
-    public static class TrackingExtService
+    public static class ExtendedTrackingService
     {
         public static void ProcessTrackingExtServiceRequest(Stream s, RMCP rmc)
         {
             switch (rmc.methodID)
             {
                 case 1:
-                    rmc.request = new RMCPacketRequestTrackingExtService_RegisterTrackingSessionEx(s);
+                    rmc.request = new RMCPacketRequestExtendedTrackingService_GetIsVIP(s);
                     break;
                 default:
                     Log.WriteLine(1, "[RMC Tracking Ext] Error: Unknown Method 0x" + rmc.methodID.ToString("X"));
@@ -28,7 +23,7 @@ namespace QuazalWV
             switch (rmc.methodID)
             {
                 case 1:
-                    reply = new RMCPacketResponseTrackingExtService_RegisterTrackingSessionEx();
+                    reply = new RMCPacketResponseExtendedTrackingService_GetIsVIP();
                     RMC.SendResponseWithACK(client.udp, p, rmc, client, reply);
                     break;
                 default:

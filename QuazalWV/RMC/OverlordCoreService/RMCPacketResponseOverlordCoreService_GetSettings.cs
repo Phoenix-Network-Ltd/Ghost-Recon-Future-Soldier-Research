@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QuazalWV
 {
@@ -31,7 +28,7 @@ namespace QuazalWV
 
         public override string ToString()
         {
-            return "[GetVariants Response]";
+            return "[GetSettings Response]";
         }
     }
 }
